@@ -156,7 +156,8 @@ function SeederModule( itemName )
       enabled = "false",
       ingredients = {
         {"raw-wood", 5},
-        {"alien-artifact", 1},
+--        {"alien-artifact", 1},
+        {"science-pack-3", 5},
         {"plastic-bar", 3}
       },
       result = itemName,
@@ -191,7 +192,8 @@ function TerraformerModule( itemName )
       name = "craft-terraform-module-"..itemName,
       enabled = "false",
       ingredients = {
-        {"alien-artifact", 5},
+--        {"alien-artifact", 5},
+        {"science-pack-3", 5},
         {"processing-unit", 2},
         {"plastic-bar", 5}
       },

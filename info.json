@@ -1,9 +1,9 @@
 {
   "name": "homeworld",
-  "version": "1.4.1",
-  "factorio_version": "0.13",
-  "title": "Homeworld",
-  "author": "Luke Perkin",
+  "version": "1.5.3",
+  "factorio_version": "0.15",
+  "title": "HomeWorld",
+  "author": "Luke Perkin","nic"
   "contact": "",
   "www": "www.locogame.co.uk",
   "description": "Supply resources to your homeworld so that civilization can be restored."

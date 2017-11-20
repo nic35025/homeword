@@ -22,81 +22,102 @@ data:extend({
         close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 }
     },
 
+
+--    {
+--      type = "container",
+--      name = "sawmill-Overlay",
+--      max_health = 100,
+--      icon = "__homeworld__/graphics/icons/sawmill.png",
+--      flags = {"placeable-neutral", "player-creation"},
+--      minable = {mining_time = 1,result = "sawmill"},
+--      collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+--      selection_box = {{-1, -1}, {1, 1}},
+--      inventory_size = 1,
+--      picture =
+--      {
+--        filename = "__homeworld__/graphics/entities/sawmil/sawmill-overlay.png",
+--        priority = "extra-high",
+--        width = 640,
+--        height = 640,
+--        shift = {0.0, 0.0}
+--      }
+--    },
+
     {
-        type = "furnace",
-        name = "sawmill",
-        icon = "__homeworld__/graphics/icons/sawmill.png",
-        flags = {"player-creation", "placeable-player"},
-        minable = {mining_time = 0.3, result = "sawmill"},
-        max_health = 50,
-        corpse = "big-remnants",
-        collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
-        selection_box = {{-1.8, -1.8}, {1.8, 1.8}},
-        animation = {
-            filename = "__homeworld__/graphics/entity/sawmill.png",
-            priority = "extra-high",
-            width = 260,
-            height = 240,
-            frame_count = 12,
-            line_length = 6,
-            shift = {0.40625, -0.71875},
-            animation_speed = 4
-        },
+      type = "furnace",
+      name = "sawmill",
+      icon = "__homeworld__/graphics/icons/sawmill.png",
+      flags = {"player-creation", "placeable-player"},
+      minable = {mining_time = 0.3, result = "sawmill"},
+      max_health = 50,
+      corpse = "big-remnants",
+      collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
+      selection_box = {{-1.8, -1.8}, {1.8, 1.8}},
+      animation = {
+          filename = "__homeworld__/graphics/entity/sawmill.png",
+          priority = "extra-high",
+          width = 260,
+          height = 240,
+          frame_count = 12,
+          line_length = 6,
+          shift = {0.40625, -0.71875},
+          animation_speed = 4
+      },
 
-        crafting_categories = {"sawmill"},
-        crafting_speed = 0.1,
-        energy_usage = "15kW",
-        source_inventory_size = 1,
-        result_inventory_size = 5,
-        energy_source =
-        {
-          type = "burner",
-          effectivity = 1,
-          emissions = 0.002,
-          fuel_inventory_size = 1
-        },
-        inventory_size = 12,
-        open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
-        close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 }
+      crafting_categories = {"sawmill"},
+      crafting_speed = 0.1,
+      energy_usage = "15kW",
+      source_inventory_size = 1,
+      result_inventory_size = 5,
+      energy_source =
+      {
+        type = "burner",
+        effectivity = 1,
+        emissions = 0.002,
+        fuel_inventory_size = 1
+      },
+      inventory_size = 12,
+      open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
+      close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 }
     },
 
-	 {
-        type = "container",
-        name = "homeworld_portal",
-        icon = "__homeworld__/graphics/icons/portal.png",
-        flags = {"player-creation", "placeable-player"},
-        render_layer = "floor",
-        max_health = 150,
-        corpse = "big-remnants",
-        dying_explosion = "medium-explosion",
-        collision_box = {{-2.2, -1.2}, {2.2, 2.2}},
-        selection_box = {{-2.5, -1.5}, {2.5, 2.5}},
-        picture = {
-            filename = "__homeworld__/graphics/entity/portal/portal.png",
-            priority = "low",
-            width = 226,
-            height = 163,
-            shift = {0.9375, 0.0625}
-        },
-        connection_point =
+	  {
+      type = "container",
+      name = "homeworld_portal",
+      icon = "__homeworld__/graphics/icons/portal.png",
+      flags = {"player-creation", "placeable-player"},
+      render_layer = "floor",
+      max_health = 150,
+      corpse = "big-remnants",
+      dying_explosion = "medium-explosion",
+      collision_box = {{-2.2, -1.2}, {2.2, 2.2}},
+      selection_box = {{-2.5, -1.5}, {2.5, 2.5}},
+      picture = {
+          filename = "__homeworld__/graphics/entity/portal/portal.png",
+          priority = "low",
+          width = 226,
+          height = 163,
+          shift = {0.9375, 0.0625}
+      },
+      connection_point =
+      {
+        shadow =
         {
-          shadow =
-          {
-            red = {0.7, -0.3},
-            green = {0.7, -0.3}
-          },
-          wire =
-          {
-            red = {0.3, -0.8},
-            green = {0.3, -0.8}
-          }
+          red = {0.7, -0.3},
+          green = {0.7, -0.3}
         },
-        inventory_size = 36,
-        open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
-        close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
+        wire =
+        {
+          red = {0.3, -0.8},
+          green = {0.3, -0.8}
+        }
+      },
+      inventory_size = 36,
+      open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
+      close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     },
 
-	 {
+	  {
         type = "explosion",
         name = "portal-sound",
         flags = {"not-on-map"},
@@ -132,7 +153,7 @@ data:extend({
         }
     },
 
-	 {
+	  {
         type = "explosion",
         name = "portal-fx",
         flags = {"not-on-map"},

@@ -31,10 +31,32 @@ data:extend({
 		icon = "__homeworld__/graphics/icons/sawmill.png",
 		flags = { "goes-to-quickbar" },
 		subgroup = "extraction-machine",
-		place_result = "sawmill",
+--		place_result = "sawmill-overlay",
+	    place_result = "sawmill",
 		order = "a[items]-a[burner-mining-drill]",
 		stack_size = 16
 	},
+
+--	{
+--		type = "container",
+--		name = "sawmill-overlay",
+--		max_health = 100,
+--		icon = "__homeworld__/graphics/icons/sawmill.png",
+--		flags = {"placeable-neutral", "player-creation"},
+--		minable = {mining_time = 1,result = "sawmill"},
+--		collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+--		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+--		inventory_size = 1,
+--		picture =
+--		{
+--			filename = "__homeworld__/graphics/entitie/sawmill/sawmill-overlay.png",
+--			priority = "extra-high",
+--			width = 640,
+--			height = 640,
+--			shift = {0.0, 0.0}
+--		}
+--	},
+
 
 	{
 		type = "item",
@@ -137,7 +159,7 @@ data:extend({
 	    name = "water-barrel",
 	    icon = "__homeworld__/graphics/icons/fluid/water-barrel.png",
 	    flags = {"goes-to-main-inventory"},
-	    subgroup = "barrel",
+	    subgroup = "liquid-item",
 	    stack_size = 256
   	},
 
@@ -146,7 +168,7 @@ data:extend({
 	    name = "wine-barrel",
 	    icon = "__homeworld__/graphics/icons/fluid/water-barrel.png",
 	    flags = {"goes-to-main-inventory"},
-	    subgroup = "barrel",
+	    subgroup = "liquid-item",
 	    stack_size = 256
   	},
 

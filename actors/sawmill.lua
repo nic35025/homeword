@@ -10,7 +10,7 @@ function Sawmill:increment_saw_timer()
     self.state.next_saw_tick = game.tick + config.saw_interval
 end
 
-function Sawmill:input_inventory()
+function Sawmill:input_inventory() 
     return self.state.entity.get_inventory(2)
 end
 
@@ -20,7 +20,7 @@ function Sawmill:can_operate(tick)
         and entity.valid
         and (entity.energy > 0 or self:input_inventory().is_empty())
 end
-
+-- colected trees from area config.work_radius
 function Sawmill:tick( tick )
     if self:can_operate(tick) then
         self:increment_saw_timer()

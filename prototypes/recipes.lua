@@ -26,9 +26,9 @@ data:extend({
 	{
 		type = "recipe",
 		name = "homeworld-portal",
-		enabled = "false",
+		enabled = "true",
 		ingredients = {
-			{"alien-artifact", 50},
+			{"science-pack-3", 50},
          {"stone-brick", 200},
 			{"iron-chest", 5}
 		},
@@ -202,6 +202,7 @@ data:extend({
         enabled = "false",
         ingredients = {{"concrete", 3}, {"stone-brick", 1}, {"steel-plate", 1}, {"wood", 2}},
         result = "building-materials",
+        energy_required = 4,
         result_count = 3
     },
 
@@ -211,6 +212,7 @@ data:extend({
         enabled = "false",
         ingredients = {{"raw-wood", 2}, {"plastic-bar", 1}},
         result = "wood",
+        energy_required = 5,
         result_count = 30
     },
 
@@ -302,7 +304,7 @@ data:extend({
         name = "fill-water-barrel",
         category = "crafting-with-fluid",
         energy_required = 1,
-        subgroup = "barrel",
+        subgroup = "liquid-item",
         order = "b",
         enabled = "false",
         icon = "__homeworld__/graphics/icons/fluid/fill-water-barrel.png",
@@ -322,7 +324,7 @@ data:extend({
         name = "fill-beer-barrel",
         category = "crafting-with-fluid",
         energy_required = 1,
-        subgroup = "barrel",
+        subgroup = "liquid-item",
         order = "b",
         enabled = "false",
         icon = "__homeworld__/graphics/icons/beer.png",

@@ -1,10 +1,10 @@
 local fluidTech = data.raw.technology["fluid-handling"]
-local alienTech = data.raw.technology["alien-technology"]
+--local alienTech = data.raw.technology["alien-technology"]
 local battery = data.raw.technology["battery"]
 local plastics = data.raw.technology["plastics"]
 local concreteTech = data.raw.technology["concrete"]
 local circuitNetwork = data.raw.technology["circuit-network"]
-table.insert(alienTech.effects, {type = "unlock-recipe", recipe = "homeworld-portal"})
+--table.insert(alienTech.effects, {type = "unlock-recipe", recipe = "homeworld-portal"})
 table.insert(battery.effects, {type = "unlock-recipe", recipe = "portable-electronics"})
 table.insert(plastics.effects, {type = "unlock-recipe", recipe = "synthetic-wood"})
 table.insert(concreteTech.effects, {type = "unlock-recipe", recipe = "building-materials"})
@@ -17,7 +17,7 @@ data:extend({
 	{
 		type = "technology",
 		name = "agriculture",
-		icon = "__base__/graphics/icons/fish.png",
+		icon = "__homeworld__/graphics/entity/fish.png",
 		prerequisites = {},
 		unit =
 	    {
@@ -99,10 +99,11 @@ data:extend({
 		type = "technology",
 		name = "terraforming-2",
 		icon = "__homeworld__/graphics/icons/terraformer.png",
-		prerequisites = {"terraforming-1", "alien-technology"},
+		prerequisites = {"terraforming-1" },
 		unit = {
 			count = 125,
-			ingredients = {{"science-pack-1", 1}, {"science-pack-2", 1}, {"science-pack-3", 1}, {"alien-science-pack", 1}},
+--			ingredients = {{"science-pack-1", 1}, {"science-pack-2", 1}, {"science-pack-3", 1}, {"alien-science-pack", 1}},
+			ingredients = {{"science-pack-1", 1}, {"science-pack-2", 1}, {"science-pack-3", 3} },
 			time = 40
 		},
 		effects = {

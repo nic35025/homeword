@@ -92,6 +92,7 @@ end
 
 function GUI.icon(name, iconName)
 	return GUI.parent().add{type = "checkbox", style = "item-icon-"..iconName, state = false, name = name}
+--	return GUI.parent().add{type = "sprite-button", style = "btn-icon-"..iconName, name = name}
 end
 
 function GUI.text_field(name, defaultText)
